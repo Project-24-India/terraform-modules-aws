@@ -1,6 +1,6 @@
 # Configure the AWS Provider
 provider "aws" {
-  version = "6.70.0"
+  version = "~> 6.70"
   region  = "ap-south-2"
 }
 
