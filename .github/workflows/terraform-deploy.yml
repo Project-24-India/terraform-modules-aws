@@ -1,0 +1,29 @@
+name: Manual workflow
+
+on:
+  workflow_dispatch:
+  
+jobs:
+  run-manually:
+    runs-on: ubuntu-latest
+    steps:
+      # Message 
+      - name: Run a command
+        run: echo "This workflow was started manually"
+
+      # 1. Clone your repository code onto the runner
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      # 2. Install the Terraform CLI
+      - name: Setup Terraform
+        uses: hashicorp/setup-terraform@v3
+        with:
+          terraform_version: "1.5.7"
+
+      # 3. Run standard Terraform commands
+      - name: Terraform Init
+        run: terraform init
+
+      - name: Terraform Plan
+        run: terraform plan
