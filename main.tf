@@ -1,7 +1,15 @@
-# Configure the AWS Provider
+terraform {
+  required_providers {
+    aws = {
+      source  = "hashicorp/aws"
+      version = "6.71.0"
+    }
+  }
+}
+
 provider "aws" {
-  version = "~> 6.70"
-  region  = "ap-south-2"
+  # Configuration options
+  region = "ap-south-2"
 }
 
 # Create a VPC
