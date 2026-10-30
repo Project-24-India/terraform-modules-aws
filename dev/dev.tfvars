@@ -1,4 +1,4 @@
-aws_region = "ap-south-2"
+vpc_source = "terraform-aws-modules/vpc/aws"
 name = "my-vpc"
 cidr = "10.0.0.0/16"
 azs = ["ap-south-2a", "ap-south-2b", "ap-south-2c"]
